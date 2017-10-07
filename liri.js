@@ -103,7 +103,7 @@ function spotifyThis(input, songOrMovie) {
                     }
                 })
         });
-    }
+    } 
 }
 spotifyThis(input, songOrMovie);
 
@@ -220,7 +220,7 @@ var getTwitter = new Twitter(twitKeys);
 
 if (input === "my-tweets") {
     var params = {
-        screen_name: 'kyyleeH',
+        screen_name: 'shanandress00',
         count: 20
     };
     var counter = 0;
@@ -249,4 +249,7 @@ if (input === "my-tweets") {
             }
         }
     });
+}
+if (!input) {
+    console.log("Please enter a valid input.")
 }
