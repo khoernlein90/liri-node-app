@@ -220,7 +220,7 @@ var getTwitter = new Twitter(twitKeys);
 
 if (input === "my-tweets") {
     var params = {
-        screen_name: 'shanandress00',
+        screen_name: 'kyyleeH',
         count: 20
     };
     var counter = 0;
