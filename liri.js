@@ -199,7 +199,7 @@ if ((input === "movie-this") && (!songOrMovie)) {
 
     })
 }
-/////////////////////     ----------RANDOM.TXT---------     ////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////     ----------RANDOM.TXT---------     /////////////////////////////////
 
 if (input === "do-what-it-says") {
     fs.readFile("random.txt", "utf8", function(err, data) {
@@ -213,14 +213,14 @@ if (input === "do-what-it-says") {
         spotifyThis(input, songOrMovie);
     })
 }
-///////////////////////     -----------TWITTER-------------    ////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////     -----------TWITTER-------------    ///////////////////////////////////
 var Twitter = require('twitter');
 var twitKeys = keys.twitterKeys;
 var getTwitter = new Twitter(twitKeys);
 
 if (input === "my-tweets") {
     var params = {
-        screen_name: 'kyyleeH',
+        screen_name: 'garyvee',
         count: 20
     };
     var counter = 0;
@@ -231,7 +231,7 @@ if (input === "my-tweets") {
         if (!error) {
             for (var i = 0; i < tweets.length; i++) {
                 counter++;
-                console.log("-----------------------------------------------------------------------------------------------------------------");
+                console.log("----------------------------------------------------------------------------------------");
                 console.log("Tweet " + counter + ": " + tweets[i].text);
 
                 fs.appendFile("log.txt", "Tweet " + counter + ": " + tweets[i].text + "\n", function(err) {
@@ -251,5 +251,5 @@ if (input === "my-tweets") {
     });
 }
 if (!input) {
-    console.log("Please enter a valid input.")
+    console.log("Please enter a valid input. You can enter:\n spotify-this-song 'your song choice',\n movie-this 'your movie choice',\n my-tweets\n do-what-it-says ")
 }
